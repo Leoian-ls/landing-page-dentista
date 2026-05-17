@@ -54,6 +54,10 @@ nav ul a:hover{
     border: 2px solid #281670;
 }
 
+nav ul a:first-child{
+    white-space: nowrap;
+}
+
 /*=========== Mosaic ===========*/
 .mosaic .container{
     max-width: 90%;
@@ -149,6 +153,62 @@ section.services .box-service p{
     margin-top: 10px;
 }
 
+section.videos .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 60px;
+}
+
+.box-video{
+    width: 33.3%;
+    height: 300px;
+}
+
+.box-video iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+/*=========== Treatments ===========*/
+.treatments{
+    margin-top: 150px;
+}
+
+.treatments-title{
+    text-align: center;
+    font-size: clamp(22px, 2vw, 35px);
+    color: #281670;
+    margin-bottom: 50px;
+}
+
+.treatments-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.treatment-item h3{
+    font-size: clamp(12px, 1.3vw, 18px);
+    color: #281670;
+    margin-bottom: 10px;
+}
+
+.treatment-item{
+    background-color: #75c5f0b9;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.treatment-item p{
+    font-size: clamp(10px, 1.1vw, 14px);
+    color: #000000;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
 /*=========== Media Query ===========*/
 @media (max-width: 679px){
     .profile-img{
@@ -164,6 +224,20 @@ section.services .box-service p{
     .profile-text{
         width: 70%;
         font-size: 14px;
+    }
+
+    section.videos .container{
+        flex-direction: column;
+    }
+
+    .box-video{
+        width: 90%;
+        padding-top: 2%;
+    }
+
+    .treatments-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -225,5 +299,10 @@ section.services .box-service p{
     nav ul{
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .treatments-wrapper{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
